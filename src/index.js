@@ -27,6 +27,10 @@ function Progress(){
   );
 }
 
+const printMessage = ()=>{
+  document.getElementById('show-area').innerHTML="我被按到了";
+}
+
 root.render( // 呼叫一個物件「ReactDOM」的render函式
 // 此函式接收兩個參數:
 // 第一個參數`<h1> Hello world!</h1>`是我們所渲染到畫面上的內容。
@@ -36,8 +40,11 @@ root.render( // 呼叫一個物件「ReactDOM」的render函式
     <Hello/>
     <Hello/>
     <Progress/>
-    <App name="我的名字"/> {/* 給自製的App元件一個屬性name，用這個name屬性來指定我們按鍵的名稱 */}
+    <App name="我的名字" handleClick={printMessage}/> {/* 給自製的App元件一個屬性name，用這個name屬性來指定我們按鍵的名稱 */}
     {/* 屬性的值沒加{}的話，接到的值都會是字串，並不是整數或布林值等資料型態 */}
+    {/* 綁定printMessage函式到App元件上 */}
+    {/* 等等在子元素使用時要用綁定的名稱是handleClick，而不是我們在index.js的原函式名稱 */}
+    <div id="show-area"></div>
   </div>, 
   // Hello 函式 成為了 component
   // 一般JSX 寫成 {函式名稱}
