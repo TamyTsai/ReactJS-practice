@@ -3,7 +3,7 @@ import './App.css';
 
 function App(props) { // 在函式參數中加入props。給App函式加入props參數來接受props
   return (
-    <button onClick={props.handleClick}> {props.name} </button> /*修改button標籤中間的內容，注意這裡要使用JSX的{}才能使用js資料*/
+    // <button onClick={props.handleClick}> {props.name} </button> /*修改button標籤中間的內容，注意這裡要使用JSX的{}才能使用js資料*/
     // React把我們自製的component當中 所有的attribute（屬性） 和 其他用來控制元件的參數(像是button中的文字)整合成一個物件，稱為props
     // name是自定的屬性名稱
     // React component設計的方式為，在下列兩個狀況發生時，reactDOM會進入re-render該component的update程序，更新畫面:
@@ -11,6 +11,9 @@ function App(props) { // 在函式參數中加入props。給App函式加入props
       // 2. state的值改變時
     // props是唯讀變數，所以在元件中這樣的寫法是錯誤的: this.props.名稱=值;
     // onClick={props.handleClick}：在父（index.js）寫了一個printMessage函式，將其放到handleClick屬性中，再將HandleClick屬性綁定到子元件（App.js）上
+    <button>  {props.children}  </button>
+    // 在App.js函式中button標籤內使用children。因為children是props之一，所以使用方法為props.children。
+    // 因為index.js：<App> 在index.js中設定文字 </App> ，所以 {props.children} 會是「在index.js中設定文字」
   );
   // return (
   //   <div className="App">
