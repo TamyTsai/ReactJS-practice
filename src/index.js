@@ -18,6 +18,13 @@ root.render( // 呼叫一個物件「ReactDOM」的render函式
   </React.StrictMode>
 );
 // 因為render函式通常有很多參數，到最後會變很長，所以排版上習慣換行
+// render函式把html語法當作參數傳遞，這實際上是React所使用的一種特殊Javascript語法: JSX。
+// JSX語法多了這些特別的規定:
+  // 1. html語法可以當作參數傳遞
+  // 2. 只能傳遞一個元素（有很多html標籤要傳的話，就把他們包成一個return他們回來的函式，用函式當參數即可）
+  // 3. 可以在 html 標籤中利用「{}」寫javascript 表示式
+  // 4. style變為一物件，屬性名稱規則改用駝峰法(用大寫區隔)、屬性的值變成字串
+  // 5. 「class」屬性變成「className」。
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
