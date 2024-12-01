@@ -25,6 +25,10 @@ root.render( // 呼叫一個物件「ReactDOM」的render函式
   // 3. 可以在 html 標籤中利用「{}」寫javascript 表示式
   // 4. style變為一物件，屬性名稱規則改用駝峰法(用大寫區隔)、屬性的值變成字串
   // 5. 「class」屬性變成「className」。
+  // 6. 在元素上傳遞屬性時若省略要指定的值，該資料會獲得true布林值
+  // 7. 點擊(button)和輸入(input/textarea ...)事件：onclick屬性要改用駝峰命名為onClick
+  // 8. 函式綁定：直接寫函式名稱 或用 箭頭函式
+  // 9. 若直接用屬性="綁上去的東西" 等同於在傳字串，所以 在JSX綁定js資料、函式時，一定要加上{} 
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
