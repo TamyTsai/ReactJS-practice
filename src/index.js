@@ -36,7 +36,8 @@ root.render( // 呼叫一個物件「ReactDOM」的render函式
     <Hello/>
     <Hello/>
     <Progress/>
-    <App/>
+    <App name="我的名字"/> {/* 給自製的App元件一個屬性name，用這個name屬性來指定我們按鍵的名稱 */}
+    {/* 屬性的值沒加{}的話，接到的值都會是字串，並不是整數或布林值等資料型態 */}
   </div>, 
   // Hello 函式 成為了 component
   // 一般JSX 寫成 {函式名稱}
