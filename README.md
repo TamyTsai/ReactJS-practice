@@ -1,3 +1,5 @@
+根據[給初入JS框架新手的React.js入門 系列](https://ithelp.ithome.com.tw/m/articles/10214942)撰寫的ReactJS學習筆記
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
